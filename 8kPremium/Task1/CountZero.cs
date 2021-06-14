@@ -15,10 +15,10 @@ namespace Task1
             // convert int to binary
             var convertedNumber = Convert.ToString(number, 2);
 
-            var count = rg.Matches(convertedNumber)
-                          .Select(x => x.Length)
-                          .DefaultIfEmpty(0)
-                          .Max();
+            var count = rg.Matches(convertedNumber)     // count is IEnumerable<int>  Matches return all matches
+                          .Select(x => x.Length)        // Select return length of count variable
+                          .DefaultIfEmpty(0)            // return 0 if collection is empty
+                          .Max();                       // change IEnumerable<int> to int
 
             Console.WriteLine(count);
             return count;
