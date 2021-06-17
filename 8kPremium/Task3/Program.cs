@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Linq;
 
 namespace Task3
 {
@@ -9,13 +6,22 @@ namespace Task3
     {
         static void Main(string[] args)
         {
-            
+            IsPangram("The quick brown fox jumps over the lay dog");
+
         }
 
         public static bool IsPangram(string sentence)
         {
-            var numbers = Enumerable.Range(1, 10);
-            return true;
+            string result = sentence.ToLower().Replace(" ", "");
+            
+            for (var letter = 'a'; letter <= 'z'; letter++)
+            {
+                if (result.Contains(letter))
+                {
+                    return true;
+                }
+            }
+            return false;
         }
     }
 }
