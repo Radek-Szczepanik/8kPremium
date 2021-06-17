@@ -9,7 +9,7 @@ namespace Task1
         {
             string patern = "abc<def>ghi";
 
-            Regex rg = new Regex(@"\<\<(.*?)\>\>");
+            Regex rg = new Regex("[a]");
 
             ShowCollection(rg.Matches(patern));
         }
