@@ -7,21 +7,22 @@ namespace Task2
     {
         static void Main(string[] args)
         {
-            CountJewelsInStonesLinq("aA", "aAAbbbb");
+            CountJewelsInStones("aaaAb", "zzzAca");
+            CountJewelsInStonesLinq("aaaAb", "zzzAca");
         }
 
         public static int CountJewelsInStones(string jewels, string stones)
         {
-            int count = 0;
+            int counter = 0;
 
             for (int i = 0; i < stones.Length; i++)
             {
                 if (jewels.Contains(stones[i]))
                 {
-                    count++;
+                    counter++;
                 }
             }
-            return count;
+            return counter;
         }
 
         public static int CountJewelsInStonesLinq(string jewels, string stones)
