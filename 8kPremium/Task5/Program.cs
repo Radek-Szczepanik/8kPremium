@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Collections.Generic;
 
 namespace Task5
 {
@@ -8,18 +6,22 @@ namespace Task5
     {
         static void Main(string[] args)
         {
-            IsSumExist(new List<int> { 1, 2, 3, 4 }, 3);
+            IsSumExist(new List<int> { 9, 5, 2, 3, 7, 1, 0 }, 3);
         }
 
         public static bool IsSumExist(List<int> numbers, int k)
         {
-            foreach (var number in numbers)
+            int tempNumber;
+            foreach (var item in numbers)
             {
-                
+                tempNumber = item;
 
+                foreach (var num in numbers)
+                {
+                    if ((tempNumber + num) == k)
+                        return true;
+                }
             }
-            if (numbers.Take(2).Sum() == k)
-                return true;
             return false;
         }
     }
