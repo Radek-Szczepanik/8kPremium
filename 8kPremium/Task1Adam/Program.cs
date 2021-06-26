@@ -9,8 +9,8 @@ namespace Task1Adam
         static void Main(string[] args)
         {
             var count = new UsingRegex();
-            count.BinaryGap(64);
-            
+
+            count.BinaryGap(88);
         }
     }
 }
